@@ -1,95 +1,44 @@
 //
-//  ZMCal.m
-//  Cal_ZM
+//  main.m
+//  Cal
 //
-//  Created by soulghost on 1/10/2016.
-//  Copyright © 2016 zhanmin. All rights reserved.
+//  Created by soulghost on 29/9/2016.
+//  Copyright © 2016 soulghost. All rights reserved.
 //
 
-#import "ZMCal.h"
+#import <Foundation/Foundation.h>
+#import "Cal.h"
 
-@implementation ZMCal
+NSString* getCalendarForYear(int year);
+NSString* getCalendarForYearAndMonth(int year, int month);
 
-+ (void)printCalendarWithArgc:(int)argc argv:(const char **)argv {
-    NSString *output = nil;
-    switch (argc) {
-        case 1:
-            output = [self calendarForDate:[NSDate date]];
-            break;
-        case 2: {// 年份
-            int y = atoi(argv[1]);
-            output = [self calendarForYear:y];
-            break;
+int main(int argc, const char * argv[]) {
+    @autoreleasepool {
+        NSString *output = nil;
+        switch (argc) {
+            case 1: // 无参数，打印当前日期
+                output = [Cal getCalStringWithDate:[NSDate date]];
+                break;
+            case 2: {// 年份
+                int y = atoi(argv[1]);
+                output = getCalendarForYear(y);
+                break;
+            }
+            case 3: {
+                int m = atoi(argv[1]);
+                int y = atoi(argv[2]);
+                output = getCalendarForYearAndMonth(y, m);
+                break;
+            }
+            default:
+                break;
         }
-        case 3: {
-            int m = atoi(argv[1]);
-            int y = atoi(argv[2]);
-            NSDateFormatter *formatter = [NSDateFormatter new];
-            formatter.dateFormat = @"yyyy-MM";
-            NSDate *date = [formatter dateFromString:[NSString stringWithFormat:@"%04d-%02d",y,m]];
-            output = [self calendarForDate:date];
-            break;
-        }
-        default:
-            break;
+        printf("%s\n",output.UTF8String);
     }
-    printf("%s\n", output.UTF8String);
+    return 0;
 }
 
-+ (NSString *)calendarForDate:(NSDate *)date {
-    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-    // 计算该月天数
-    NSRange range = [calendar rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:date];
-    NSInteger dayLen = range.length;
-    // 生成这个月的第一天date对象
-    NSDateFormatter *formatter = [NSDateFormatter new];
-    formatter.dateFormat = @"yyyy MM";
-    NSDateComponents *components = [calendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitWeekday fromDate:date];
-    NSString *firstDayStr = [NSString stringWithFormat:@"%04d %02d",(int)components.year, (int)components.month];
-    NSDate *firstDay = [formatter dateFromString:firstDayStr];
-    NSString *title = [formatter stringFromDate:date];
-    components = [calendar components:NSCalendarUnitWeekday fromDate:firstDay];
-    int weekDay = (int)components.weekday - 1;
-    // 开始处理输出
-    NSMutableString *ret = @"".mutableCopy;
-    [ret appendFormat:@"      %@\nSu Mo Tu We Th Fr Sa\n", title];
-    int currentDay = 1;
-    int lineCount = 0;
-    while (weekDay > 0) {
-        weekDay--;
-        lineCount++;
-        [ret appendFormat:@"   "];
-    }
-    BOOL first = YES;
-    while (lineCount < 7) {
-        if (first) {
-            first = NO;
-            [ret appendFormat:@"%2d", currentDay];
-        } else {
-            [ret appendFormat:@" %2d", currentDay];
-        }
-        currentDay++;
-        lineCount++;
-    }
-    lineCount = 0;
-    [ret appendFormat:@"\n"];
-    while (currentDay <= dayLen) {
-        if (lineCount == 0) {
-            [ret appendFormat:@"%2d", currentDay];
-        }else {
-            [ret appendFormat:@" %2d", currentDay];
-        }
-        lineCount++;
-        currentDay++;
-        if (lineCount == 7) {
-            lineCount = 0;
-            [ret appendFormat:@"\n"];
-        }
-    }
-    return ret;
-}
-
-+ (NSString *)calendarForYear:(int)year {
+NSString* getCalendarForYear(int year) {
     NSMutableString *ret = @"".mutableCopy;
     NSDateFormatter *formatter = [NSDateFormatter new];
     formatter.dateFormat = @"yyyy MM";
@@ -97,7 +46,7 @@
     for (int i = 1; i <= 12; i++) {
         NSString *dateStr = [NSString stringWithFormat:@"%04d %02d",year, i];
         NSDate *date = [formatter dateFromString:dateStr];
-        [comps addObject:[self calendarForDate:date]];
+        [comps addObject:[Cal getCalStringWithDate:date]];
     }
     // 每三个月占一大行，每一小行都是这三个月的一小行拼接起来的
     // 一共3*4=12个月，因此循环4次
@@ -162,4 +111,12 @@
     return ret;
 }
 
-@end
+NSString* getCalendarForYearAndMonth(int year, int month) {
+    NSDateFormatter *formatter = [NSDateFormatter new];
+    formatter.dateFormat = @"yyyy MM";
+    return [Cal getCalStringWithDate:[formatter dateFromString:[NSString stringWithFormat:@"%04d %02d", year, month]]];
+}
+
+
+
+

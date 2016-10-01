@@ -10,4 +10,6 @@
 
 @interface ZMCal : NSObject
 
++ (void)printCalendarWithArgc:(int)argc argv:(const char **)argv;
+
 @end
