@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		688D50631D9F4FA10069CBDB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 688D50621D9F4FA10069CBDB /* main.m */; };
-		688D506B1D9F50270069CBDB /* XYTCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 688D506A1D9F50270069CBDB /* XYTCall.m */; };
+		688D508F1D9F57F20069CBDB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 688D508E1D9F57F20069CBDB /* main.m */; };
+		688D50971D9F58060069CBDB /* DKCal.m in Sources */ = {isa = PBXBuildFile; fileRef = 688D50961D9F58060069CBDB /* DKCal.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		688D505D1D9F4FA10069CBDB /* CopyFiles */ = {
+		688D50891D9F57F20069CBDB /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -24,14 +24,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		688D505F1D9F4FA10069CBDB /* Cal_XYT */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Cal_XYT; sourceTree = BUILT_PRODUCTS_DIR; };
-		688D50621D9F4FA10069CBDB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		688D50691D9F50270069CBDB /* XYTCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTCall.h; sourceTree = "<group>"; };
-		688D506A1D9F50270069CBDB /* XYTCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTCall.m; sourceTree = "<group>"; };
+		688D508B1D9F57F20069CBDB /* Cal_Dakui */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Cal_Dakui; sourceTree = BUILT_PRODUCTS_DIR; };
+		688D508E1D9F57F20069CBDB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		688D50951D9F58060069CBDB /* DKCal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKCal.h; sourceTree = "<group>"; };
+		688D50961D9F58060069CBDB /* DKCal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKCal.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		688D505C1D9F4FA10069CBDB /* Frameworks */ = {
+		688D50881D9F57F20069CBDB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,98 +41,98 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		688D50561D9F4FA10069CBDB = {
+		688D50821D9F57F20069CBDB = {
 			isa = PBXGroup;
 			children = (
-				688D50611D9F4FA10069CBDB /* Cal_XYT */,
-				688D50601D9F4FA10069CBDB /* Products */,
+				688D508D1D9F57F20069CBDB /* Cal_Dakui */,
+				688D508C1D9F57F20069CBDB /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		688D50601D9F4FA10069CBDB /* Products */ = {
+		688D508C1D9F57F20069CBDB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				688D505F1D9F4FA10069CBDB /* Cal_XYT */,
+				688D508B1D9F57F20069CBDB /* Cal_Dakui */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		688D50611D9F4FA10069CBDB /* Cal_XYT */ = {
+		688D508D1D9F57F20069CBDB /* Cal_Dakui */ = {
 			isa = PBXGroup;
 			children = (
-				688D50621D9F4FA10069CBDB /* main.m */,
-				688D50691D9F50270069CBDB /* XYTCall.h */,
-				688D506A1D9F50270069CBDB /* XYTCall.m */,
+				688D508E1D9F57F20069CBDB /* main.m */,
+				688D50951D9F58060069CBDB /* DKCal.h */,
+				688D50961D9F58060069CBDB /* DKCal.m */,
 			);
-			path = Cal_XYT;
+			path = Cal_Dakui;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		688D505E1D9F4FA10069CBDB /* Cal_XYT */ = {
+		688D508A1D9F57F20069CBDB /* Cal_Dakui */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 688D50661D9F4FA10069CBDB /* Build configuration list for PBXNativeTarget "Cal_XYT" */;
+			buildConfigurationList = 688D50921D9F57F20069CBDB /* Build configuration list for PBXNativeTarget "Cal_Dakui" */;
 			buildPhases = (
-				688D505B1D9F4FA10069CBDB /* Sources */,
-				688D505C1D9F4FA10069CBDB /* Frameworks */,
-				688D505D1D9F4FA10069CBDB /* CopyFiles */,
+				688D50871D9F57F20069CBDB /* Sources */,
+				688D50881D9F57F20069CBDB /* Frameworks */,
+				688D50891D9F57F20069CBDB /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Cal_XYT;
-			productName = Cal_XYT;
-			productReference = 688D505F1D9F4FA10069CBDB /* Cal_XYT */;
+			name = Cal_Dakui;
+			productName = Cal_Dakui;
+			productReference = 688D508B1D9F57F20069CBDB /* Cal_Dakui */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		688D50571D9F4FA10069CBDB /* Project object */ = {
+		688D50831D9F57F20069CBDB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0810;
-				ORGANIZATIONNAME = xyt;
+				ORGANIZATIONNAME = dakui;
 				TargetAttributes = {
-					688D505E1D9F4FA10069CBDB = {
+					688D508A1D9F57F20069CBDB = {
 						CreatedOnToolsVersion = 8.1;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 688D505A1D9F4FA10069CBDB /* Build configuration list for PBXProject "Cal_XYT" */;
+			buildConfigurationList = 688D50861D9F57F20069CBDB /* Build configuration list for PBXProject "Cal_Dakui" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 688D50561D9F4FA10069CBDB;
-			productRefGroup = 688D50601D9F4FA10069CBDB /* Products */;
+			mainGroup = 688D50821D9F57F20069CBDB;
+			productRefGroup = 688D508C1D9F57F20069CBDB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				688D505E1D9F4FA10069CBDB /* Cal_XYT */,
+				688D508A1D9F57F20069CBDB /* Cal_Dakui */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		688D505B1D9F4FA10069CBDB /* Sources */ = {
+		688D50871D9F57F20069CBDB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				688D50631D9F4FA10069CBDB /* main.m in Sources */,
-				688D506B1D9F50270069CBDB /* XYTCall.m in Sources */,
+				688D508F1D9F57F20069CBDB /* main.m in Sources */,
+				688D50971D9F58060069CBDB /* DKCal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		688D50641D9F4FA10069CBDB /* Debug */ = {
+		688D50901D9F57F20069CBDB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -179,7 +179,7 @@
 			};
 			name = Debug;
 		};
-		688D50651D9F4FA10069CBDB /* Release */ = {
+		688D50911D9F57F20069CBDB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -219,14 +219,14 @@
 			};
 			name = Release;
 		};
-		688D50671D9F4FA10069CBDB /* Debug */ = {
+		688D50931D9F57F20069CBDB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		688D50681D9F4FA10069CBDB /* Release */ = {
+		688D50941D9F57F20069CBDB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -236,24 +236,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		688D505A1D9F4FA10069CBDB /* Build configuration list for PBXProject "Cal_XYT" */ = {
+		688D50861D9F57F20069CBDB /* Build configuration list for PBXProject "Cal_Dakui" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				688D50641D9F4FA10069CBDB /* Debug */,
-				688D50651D9F4FA10069CBDB /* Release */,
+				688D50901D9F57F20069CBDB /* Debug */,
+				688D50911D9F57F20069CBDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		688D50661D9F4FA10069CBDB /* Build configuration list for PBXNativeTarget "Cal_XYT" */ = {
+		688D50921D9F57F20069CBDB /* Build configuration list for PBXNativeTarget "Cal_Dakui" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				688D50671D9F4FA10069CBDB /* Debug */,
-				688D50681D9F4FA10069CBDB /* Release */,
+				688D50931D9F57F20069CBDB /* Debug */,
+				688D50941D9F57F20069CBDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 688D50571D9F4FA10069CBDB /* Project object */;
+	rootObject = 688D50831D9F57F20069CBDB /* Project object */;
 }
